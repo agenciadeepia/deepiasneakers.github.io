@@ -585,14 +585,18 @@ a:focus {
 }
 
 
-
+.gradient-container {
+    background-image: radial-gradient(#171770, #07071A);
+   
+  }
 
 
 
 .download_section {
     font-family: 'Poppins', sans-serif;
     /* background: linear-gradient(to right, #0C0C3D, #07071A); */
-    background: radial-gradient(#171770, #07071A);
+    background-image: radial-gradient(#171770, #07071A);
+    background-image: url('../images/Patron-d-Solo.png');
     padding-top: 5vw;
     padding-bottom: 0;
 }
@@ -716,9 +720,9 @@ a:focus {
     }
 
 
-   .download_section .box{
-    margin: 2vw 0;
-   }
+    .download_section .box {
+        margin: 2vw 0;
+    }
 
 }
 
@@ -729,9 +733,28 @@ a:focus {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    text-align: center;
-    justify-content: center;
+    /* text-align: center; */
+    height: 40vw;
+    position: relative;
+    width: 100%; /* Ancho del contenedor */
+    height: 100vh; /* Altura del contenedor (viewport height) */
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente */
+    align-items: center; /* Alinea verticalmente */
 }
+
+
+.heading_container.contenedorRelleno h2 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
 
 
 
@@ -745,6 +768,8 @@ a:focus {
     background-size: cover;
     position: relative;
     border-bottom: 4px solid #CF2F71;
+    border-top: 4px solid #CF2F71;
+    
 }
 
 .testimonials::before {
@@ -754,7 +779,9 @@ a:focus {
     right: 0;
     top: 0;
     bottom: 0;
-    background: #fafafa67;
+    background: #07071A;
+    /* background-image: radial-gradient( #171770, #07071A); */
+
 }
 
 .testimonials .quote-icon {
@@ -778,7 +805,7 @@ a:focus {
 
 .testimonials .testimonial-item {
     text-align: center;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .testimonials .testimonial-item p {
@@ -790,7 +817,7 @@ a:focus {
 .testimonials .testimonial-item .testimonial-img {
     width: 100px;
     border-radius: 50%;
-    border: 6px solid rgba(255, 255, 255, 0.15);
+    border: 3px solid #cf2f71;
     margin: 0 auto;
 }
 
@@ -798,12 +825,12 @@ a:focus {
     font-size: 20px;
     font-weight: bold;
     margin: 10px 0 5px 0;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .testimonials .testimonial-item h4 {
     font-size: 14px;
-    color: black;
+    color: rgb(255, 255, 255);
     margin: 0 0 15px 0;
 }
 
@@ -1038,15 +1065,21 @@ a:focus {
     color: #CF2F71;
 }
 
+@media(max-width: 992px){
 
-
-
-@media (max-width: 768px){
-
-.subscribe_section{
-    margin-bottom: 25vw;
-    background-color: #fff !important;
+    .subscribe_section {
+        margin-bottom: 10vw;
+        background-color: #fff !important;
+    }
 }
+
+
+@media (max-width: 768px) {
+
+    .subscribe_section {
+        margin-bottom: 20vw;
+        background-color: #fff !important;
+    }
 
 }
 
@@ -1177,15 +1210,15 @@ a:focus {
 
 
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-.contact_section{
-    padding: 2vw 8vw;
-}
+    .contact_section {
+        padding: 2vw 8vw;
+    }
 
-h2{
-    font-size: 2.5em !important;
-}
+    h2 {
+        font-size: 2.5em !important;
+    }
 
 }
 
@@ -1322,9 +1355,10 @@ h2{
 
 
 .H2OtroPlaneta {
-    color: transparent !important;
     font-size: 4em;
     text-align: center;
+    color: white !important;
+    align-items: center !important;
 }
 
 .h2nuevas {
